@@ -1,0 +1,12 @@
+# [My Terraform aliases]
+alias @tf_init='fn_echo_green "[INIT]Initializing the Terraform directory..."; \
+        terraform init && \
+        fn_echo_green "[FMT]Ensuring Terraform code is formatted properly..."; \
+        terraform fmt -recursive && \
+        fn_echo_green "[VALIDATE]Making sure code has proper syntax and no errors..."; \
+        terraform validate && \
+        fn_echo_green "[PLAN]See the execution plan and note the number of resources that will be created:"; \
+        terraform plan && \
+        fn_echo_green "[APPLY]Confirm and apply with yes"; \
+        terraform apply --auto-approve'
+alias @tf_trace_on="export TF_LOG=TRACE"
