@@ -42,4 +42,15 @@ variable "account_id" {
 */
 variable "owner" {
     type = string
+    default = "Owner name"
+}
+
+variable "department" {
+    type = string
+    default = "DevOps"
+}
+
+variable "description" {
+    type = string
+    default = "TF infra"
 }
